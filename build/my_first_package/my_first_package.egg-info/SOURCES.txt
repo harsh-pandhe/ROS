@@ -1,6 +1,7 @@
 package.xml
 setup.cfg
 setup.py
+launch/my_launch_file.launch.py
 my_first_package/__init__.py
 my_first_package/my_test_node.py
 my_first_package.egg-info/PKG-INFO

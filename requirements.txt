@@ -1,0 +1,28 @@
+# ROS 2 Python Dependencies
+# Note: ROS 2 packages are typically installed via apt, not pip
+# This file documents the Python packages used in this workspace
+
+# Core ROS 2 packages (install via apt)
+# sudo apt install ros-humble-rclpy
+# sudo apt install ros-humble-std-msgs
+# sudo apt install ros-humble-geometry-msgs
+# sudo apt install ros-humble-turtlesim
+
+# Development tools
+colcon-common-extensions>=0.7.4
+rosdep>=0.24.0
+
+# Python development
+pytest>=7.0.0
+pytest-cov>=4.0.0
+flake8>=5.0.0
+pep257>=0.7.0
+
+# Code quality and formatting (optional)
+black>=22.0.0
+isort>=5.10.0
+pylint>=2.15.0
+
+# Documentation (optional)
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
