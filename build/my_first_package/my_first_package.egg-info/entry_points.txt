@@ -1,0 +1,3 @@
+[console_scripts]
+my_test_node = my_first_package.my_test_node:main
+
