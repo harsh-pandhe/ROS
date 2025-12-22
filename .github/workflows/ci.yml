@@ -24,6 +24,11 @@ jobs:
         sudo apt-get install -y python3-colcon-common-extensions
         sudo apt-get install -y ros-humble-turtlesim ros-humble-geometry-msgs
 
+    - name: Fix file permissions
+      run: |
+        chmod -R +x src/*/setup.py
+        chmod -R +x src/*/
+
     - name: Build workspace
       run: |
         source /opt/ros/humble/setup.bash
