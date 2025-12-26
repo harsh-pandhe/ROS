@@ -32,11 +32,12 @@ class RadarToLaser(Node):
             self.current_angle = msg.data
 
     def dist_cb(self, msg):
-        # Convert mm to meters for ROS standard
+        # Convert mm to meters
         dist_meters = msg.data / 1000.0
         
-        # Filter noise/infinity
-        if dist_meters > 1.9 or dist_meters < 0.01:
+        # Filter noise, infinity, AND the 9408 error
+        # Added "dist_meters > 8.0" to catch the 9408 (which is 9.4 meters)
+        if dist_meters > 1.9 or dist_meters < 0.01 or dist_meters > 8.0:
             dist_meters = float('inf')
             
         # Store in buffer
